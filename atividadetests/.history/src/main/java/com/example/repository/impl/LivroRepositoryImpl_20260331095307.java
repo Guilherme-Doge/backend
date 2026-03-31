@@ -1,0 +1,15 @@
+package com.example.repository.impl;
+
+import com.example.repository.LivroRepository;
+
+public class LivroRepositoryImpl implements LivroRepository {
+    
+<!-- Source: https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+
+}

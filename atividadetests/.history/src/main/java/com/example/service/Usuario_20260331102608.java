@@ -1,0 +1,14 @@
+package com.example.service;
+
+import com.example.repository.EmprestimoRepository;
+import com.example.repository.LivroRepository;
+
+public class UsuarioService {
+
+    private final EmprestimoRepository repository;
+
+    public EmprestimoService(EmprestimoRepository repository) {
+        this.repository = repository;
+    }
+    
+}

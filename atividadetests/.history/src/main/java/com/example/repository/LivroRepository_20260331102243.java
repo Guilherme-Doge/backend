@@ -1,0 +1,31 @@
+package com.example.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class LivroRepository {
+    private Connection connection;
+
+    public LivroRepository(Connection connection) {
+        this.connection = connection;
+    }
+
+    public void registerBook(String title, String author, int publicationYear) {
+        String command = """
+                INSER INTO
+                livros(titulo, autor, ano)
+                VALUES (?, ?, ?);
+                """;
+        try (PreparedStatement stmt = connection.prepareStatement(command)) {
+            stmt.setString(1, title);
+            stmt.setString(2, author);
+            stmt.setInt(3, publicationYear);
+            ResultSet rs = stmt.executeQuery();
+            return rs
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
