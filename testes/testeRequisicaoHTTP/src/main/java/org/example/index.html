@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="buscar()">Buscar</button>
+    <p id="resposta"></p>
+</body>
+
+    <script>
+        function buscar() {
+            fetch("http://localhost:8080/mensagem")
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById("resposta").innerText = data;
+                });
+        }
+    </script>
+</html>
