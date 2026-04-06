@@ -7,11 +7,11 @@ public class Livro {
     private int ano;
     private boolean disponivel;
     
-    public Livro(String titulo, String autor, int ano, boolean disponivel) {
+    public Livro(String titulo, String autor, int ano) {
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
-        this.disponivel = disponivel;
+        this.disponivel = true;
     }
 
     public Livro(int id, String titulo, String autor, int ano, boolean disponivel) {

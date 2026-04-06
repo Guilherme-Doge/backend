@@ -1,30 +1,27 @@
 package com.example.app;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import com.example.config.ConnectionFactory;
-import com.example.repository.EmprestimoRepository;
 import com.example.repository.LivroRepository;
-import com.example.repository.UsuarioRepository;
-import com.example.service.EmprestimoService;
+import com.example.repository.impl.EmprestimoRepositoryImpl;
+import com.example.repository.impl.LivroRepositoryImpl;
 import com.example.service.LivroService;
-import com.example.service.UsuarioService;
+import com.example.service.impl.EmprestimoService;
+import com.example.service.impl.LivroServiceImpl;
+import com.example.service.impl.UsuarioService;
+
+import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
         while (true) {
             try {
-                Connection conn = ConnectionFactory.getConnection();
+                LivroRepository livroRepo = new LivroRepositoryImpl();
+                LivroService livroService = new LivroServiceImpl();
 
-                LivroRepository livroRepo = new LivroRepository(conn);
-                LivroService livreService = new LivroService(livroRepo);
+                EmprestimoRepositoryImpl emprestimoRepo = new EmprestimoRepositoryImpl();
+                EmprestimoService emprestimoService = new EmprestimoService();
 
-                EmprestimoRepository emprestimoRepo = new EmprestimoRepository(conn);
-                EmprestimoService emprestimoService = new EmprestimoService(emprestimoRepo);
-
-                UsuarioRepository usuarioRepo = new UsuarioRepository(conn);
-                UsuarioService usuarioService = new UsuarioService(usuarioRepo);
+                UsuarioRepository usuarioRepo = new UsuarioRepository();
+                UsuarioService usuarioService = new UsuarioService();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }

@@ -1,41 +1,15 @@
 package com.example.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.example.model.Livro;
-import com.example.repository.LivroRepository;
 
-public class LivroService {
+public interface LivroService {
 
-    private final LivroRepository repository;
+    Livro salvarLivro(Livro livro) throws SQLException;
 
-    public LivroService(LivroRepository repository) {
-        this.repository = repository;
-    }
+    List<Livro> buscarTodos() throws SQLException;
 
-    public void registerBook(String title, String author, int publicationYear) {
-        repository.registerBook(title, author, publicationYear);
-    }
-
-    public void validarExistenciaLivro(Livro livro) {
-        if (livro.getId() == repository.listarLivroPorId(livro.getId()).getId()) {
-            throw new RuntimeException("Livro não existe");
-        }
-    }
-
-    public void marcarLivroComoNaoDisponivel(Livro livro) {
-        repository.marcarLivroComoNaoDisponivel(livro.getId());
-    }
-
-    public void listarLivros() {
-        List<Livro> livros = repository.listarLivros();
-        System.out.println("ID | TÍTULO | AUTOR | ANO DE PUBLICAÇÃO | DISPONÍVEL");
-        for (Livro livro : livros) {
-            System.out.println(livro.getId() + " | " +
-            livro.getTitulo() + " | " + 
-            livro.getAutor() + " | " + 
-            livro.getAno() + " | " + 
-            livro.isDisponivel());
-        }
-    }
+    Livro alterarDisponibilidade(Livro livro, boolean disponibilidade) throws SQLException;
 }
