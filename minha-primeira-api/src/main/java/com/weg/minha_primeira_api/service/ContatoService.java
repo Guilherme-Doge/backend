@@ -9,6 +9,8 @@ public interface ContatoService {
 
     public List<Contato> readAllContato();
 
+    public Contato readContatoById(long id);
+
     public void updateContatoById(String nome, String numero, long id);
 
     public void deleteContatoById(long id);

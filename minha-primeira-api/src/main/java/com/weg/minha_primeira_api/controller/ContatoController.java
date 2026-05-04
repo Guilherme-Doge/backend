@@ -1,10 +1,7 @@
 package com.weg.minha_primeira_api.controller;
 
 import com.weg.minha_primeira_api.model.Contato;
-import com.weg.minha_primeira_api.repo.ContatoRepo;
-import com.weg.minha_primeira_api.repo.ContatoRepoImpl;
 import com.weg.minha_primeira_api.service.ContatoService;
-import com.weg.minha_primeira_api.service.ContatoServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,9 +9,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/contatos")
 public class ContatoController {
+    private final ContatoService service;
 
-    private ContatoRepo repo = new ContatoRepoImpl();
-    private ContatoService service = new ContatoServiceImpl(repo);
+    public ContatoController(ContatoService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public void createContato(String nome, String numero) {
@@ -24,6 +23,11 @@ public class ContatoController {
     @GetMapping
     public List<Contato> readAllContato() {
         return service.readAllContato();
+    }
+
+    @GetMapping("/{id}")
+    public Contato buscarContatoPorId(@PathVariable long id) {
+        return service.readContatoById(id);
     }
 
     @PutMapping

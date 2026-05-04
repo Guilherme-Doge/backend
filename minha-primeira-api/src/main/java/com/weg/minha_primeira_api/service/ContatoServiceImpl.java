@@ -48,6 +48,10 @@ public class ContatoServiceImpl implements ContatoService {
         }
     }
 
+    public Contato readContatoById(long id) {
+        return null;
+    }
+
     @Override
     public void updateContatoById(String nome, String numero, long id) {
 
