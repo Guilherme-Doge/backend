@@ -1,11 +1,11 @@
-package senai.service.equipamento;
+package senai.repo.equipamento;
 
 import senai.model.Equipamento;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface EquipamentoService {
+public interface EquipamentoRepo {
     Equipamento criarEquipamento(Equipamento equipamento) throws SQLException;
 
     Equipamento buscarPorId(int id) throws SQLException;
