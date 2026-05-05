@@ -1,7 +1,7 @@
 package com.weg.biblioteca.dao;
 
 import com.weg.biblioteca.infra.ConexaoFactory;
-import com.weg.biblioteca.model.Livro;
+import com.weg.biblioteca.model.Usuario;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -10,48 +10,45 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class LivroRepoImpl implements LivroRepo {
+public class UsuarioRepoImpl implements UsuarioRepo {
 
     @Override
-    public Livro salvar(Livro livro) throws SQLException {
+    public Usuario salvar(Usuario usuario) throws SQLException {
         String sql = """
-                INSERT INTO livro(
-                    titulo,
-                    autor,
-                    ano_publicacao)
-                VALUES (?,?,?);""";
+                INSERT INTO usuario(
+                    nome,
+                    email)
+                VALUES (?,?);""";
 
         try (Connection conn = ConexaoFactory.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
 
-            stmt.setString(1, livro.getTitulo());
-            stmt.setString(2, livro.getAutor());
-            stmt.setInt(3, livro.getAnoPublicacao());
+            stmt.setString(1, usuario.getNome());
+            stmt.setString(2, usuario.getEmail());
 
             stmt.executeUpdate();
 
             ResultSet rs = stmt.getGeneratedKeys();
 
             if (rs.next()) {
-                livro.setId(rs.getLong(1));
+                usuario.setId(rs.getLong(1));
 
-                return livro;
+                return usuario;
             } else {
-                throw new SQLDataException("Livro não cadastrado");
+                throw new SQLDataException("Usuário não cadastrado");
             }
         }
     }
 
     @Override
-    public List<Livro> buscarTodos() throws SQLException {
-        List<Livro> livros = new ArrayList<>();
+    public List<Usuario> buscarTodos() throws SQLException {
+        List<Usuario> usuarios = new ArrayList<>();
 
         String sql = """
                 SELECT id,
-                        autor,
-                        titulo,
-                        ano_publicacao
-                FROM livro;""";
+                        nome,
+                        email
+                FROM usuario;""";
 
         try (Connection conn = ConexaoFactory.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -59,23 +56,21 @@ public class LivroRepoImpl implements LivroRepo {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                livros.add(new Livro(rs.getLong("id"),
-                                    rs.getString("autor"),
-                                    rs.getString("titulo"),
-                                    rs.getInt("ano_publicacao")));
+                usuarios.add(new Usuario(rs.getLong("id"),
+                        rs.getString("nome"),
+                        rs.getString("email")));
             }
         }
-        return livros;
+        return usuarios;
     }
 
     @Override
-    public Optional<Livro> buscarPorId(long id) throws SQLException {
-        Livro livro = new Livro();
+    public Optional<Usuario> buscarPorId(long id) throws SQLException {
+        Usuario usuario = new Usuario();
         String sql = """
-                SELECT autor,
-                        titulo,
-                        ano_publicacao
-                FROM livro
+                SELECT nome,
+                        email
+                FROM usuario
                 WHERE id = ?;""";
 
         try (Connection conn = ConexaoFactory.conectar();
@@ -86,44 +81,41 @@ public class LivroRepoImpl implements LivroRepo {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                livro.setId(id);
-                livro.setTitulo(rs.getString("titulo"));
-                livro.setAutor(rs.getString("autor"));
-                livro.setAnoPublicacao(rs.getInt("ano_publicacao"));
+                usuario.setId(id);
+                usuario.setNome(rs.getString("nome"));
+                usuario.setEmail(rs.getString("email"));
             }
         }
 
-        return Optional.of(livro);
+        return Optional.of(usuario);
     }
 
     @Override
-    public Livro atualizar(Livro livro) throws SQLException {
+    public Usuario atualizar(Usuario usuario) throws SQLException {
         String sql = """
-                UPDATE livro
-                SET titulo = ?,
-                    autor = ?,
-                    ano_publicacao = ?
+                UPDATE usuario
+                SET nome = ?,
+                    email = ?
                 WHERE id = ?;""";
 
         try (Connection conn = ConexaoFactory.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, livro.getTitulo());
-            stmt.setString(2, livro.getAutor());
-            stmt.setInt(3, livro.getAnoPublicacao());
-            stmt.setLong(4, livro.getId());
+            stmt.setString(1, usuario.getNome());
+            stmt.setString(2, usuario.getEmail());
+            stmt.setLong(3, usuario.getId());
 
             stmt.executeUpdate();
 
-            return livro;
+            return usuario;
         }
     }
 
     public boolean existePorId(long id) throws SQLException {
-        Livro livro = new Livro();
+        Usuario usuario = new Usuario();
         String sql = """
                 SELECT id
-                FROM livro
+                FROM usuario
                 WHERE id = ?;""";
 
         try (Connection conn = ConexaoFactory.conectar();
@@ -134,22 +126,22 @@ public class LivroRepoImpl implements LivroRepo {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                livro.setId(id);
+                usuario.setId(id);
             } else {
-                livro.setId(0);
+                usuario.setId(0);
             }
         }
 
-       if (livro.getId() == 0) {
-           return false;
-       }
-       return true;
+        if (usuario.getId() == 0) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public void deletar(long id) throws SQLException {
         String sql = """
-                DELETE FROM livro
+                DELETE FROM usuario
                 WHERE id = ?;""";
 
         try (Connection conn = ConexaoFactory.conectar();

@@ -10,6 +10,7 @@ public interface LivroRepo {
     public Livro salvar(Livro livro) throws SQLException;
     public List<Livro> buscarTodos() throws SQLException;
     public Optional<Livro> buscarPorId(long id) throws SQLException;
-    public Livro atualizar(long id) throws SQLException;
+    public Livro atualizar(Livro livro) throws SQLException;
+    public boolean existePorId(long id) throws SQLException;
     public void deletar(long id) throws SQLException;
 }

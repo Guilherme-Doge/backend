@@ -33,16 +33,26 @@ public class LivroServiceImpl implements LivroService {
 
     @Override
     public Optional<Livro> buscarPorId(long id) throws SQLException {
-        return repo.buscarPorId(id);
+        Livro livro = repo.buscarPorId(id).orElseThrow(() -> new RuntimeException("O livro não foi encontrado!"));
+        return Optional.of(livro);
     }
 
     @Override
-    public Livro atualizar(long id) throws SQLException {
-        return null;
+    public Livro atualizar(long id, Livro livro) throws SQLException {
+        if (!repo.existePorId(id)) {
+            throw new RuntimeException("Livro não encontrado!");
+        }
+
+        livro.setId(id);
+        return repo.atualizar(livro);
     }
 
     @Override
     public void deletar(long id) throws SQLException {
+        if (!repo.existePorId(id)) {
+            throw new RuntimeException("Livro não encontrado!");
+        }
 
+        repo.deletar(id);
     }
 }

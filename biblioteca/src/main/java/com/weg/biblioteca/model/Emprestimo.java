@@ -4,27 +4,28 @@ import java.time.LocalDate;
 
 public class Emprestimo {
     private long id;
-    private long livro_id;
-    private long usuario_id;
-    private LocalDate data_emprestimo;
-    private LocalDate data_devolucao;
+    private long livroId;
+    private long usuarioId;
+    private LocalDate dataEmprestimo;
+    private LocalDate dataDevolucao;
 
-    public Emprestimo(long id, long livro_id, long usuario_id, LocalDate data_emprestimo, LocalDate data_devolucao) {
+    public Emprestimo(long id, long livroId, long usuarioId, LocalDate dataEmprestimo, LocalDate dataDevolucao) {
         this.id = id;
-        this.livro_id = livro_id;
-        this.usuario_id = usuario_id;
-        this.data_emprestimo = data_emprestimo;
-        this.data_devolucao = data_devolucao;
+        this.livroId = livroId;
+        this.usuarioId = usuarioId;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
     }
 
-    public Emprestimo(long livro_id, long usuario_id, LocalDate data_emprestimo, LocalDate data_devolucao) {
-        this.livro_id = livro_id;
-        this.usuario_id = usuario_id;
-        this.data_emprestimo = data_emprestimo;
-        this.data_devolucao = data_devolucao;
+    public Emprestimo(long livroId, long usuarioId, LocalDate dataEmprestimo, LocalDate dataDevolucao) {
+        this.livroId = livroId;
+        this.usuarioId = usuarioId;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
     }
 
     public Emprestimo() {
+
     }
 
     public long getId() {
@@ -35,35 +36,35 @@ public class Emprestimo {
         this.id = id;
     }
 
-    public long getLivro_id() {
-        return livro_id;
+    public long getLivroId() {
+        return livroId;
     }
 
-    public void setLivro_id(long livro_id) {
-        this.livro_id = livro_id;
+    public void setLivroId(long livroId) {
+        this.livroId = livroId;
     }
 
-    public long getUsuario_id() {
-        return usuario_id;
+    public long getUsuarioId() {
+        return usuarioId;
     }
 
-    public void setUsuario_id(long usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsuarioId(long usuarioId) {
+        this.usuarioId = usuarioId;
     }
 
-    public LocalDate getData_emprestimo() {
-        return data_emprestimo;
+    public LocalDate getDataEmprestimo() {
+        return dataEmprestimo;
     }
 
-    public void setData_emprestimo(LocalDate data_emprestimo) {
-        this.data_emprestimo = data_emprestimo;
+    public void setDataEmprestimo(LocalDate dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
     }
 
-    public LocalDate getData_devolucao() {
-        return data_devolucao;
+    public LocalDate getDataDevolucao() {
+        return dataDevolucao;
     }
 
-    public void setData_devolucao(LocalDate data_devolucao) {
-        this.data_devolucao = data_devolucao;
+    public void setDataDevolucao(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
     }
 }
