@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff39a3ad-387a-4351-8393-3ada88e2bc66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/controller/ContatoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/infraecstruture/ConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/mapper/ContatoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/repository/ContatoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/repository/ContatoRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/service/ContatoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/MinhaPrimeiraApiApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/controller/ContatoController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/infraecstruture/ConnectionFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/model/Contato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/repository/ContatoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/repository/ContatoRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/service/ContatoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/senai/minha_primeira_api/MinhaPrimeiraApiApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AtividadeRevisao" beforeDir="false" afterPath="$PROJECT_DIR$/../AtividadeRevisao" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-Java-Com-Testes/exercicio-java-com-testes" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercicio-Java-Com-Testes/exercicio-java-com-testes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SistemaGestaoFornecedoresEquipamentos" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaGestaoFornecedoresEquipamentos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/src/main/java/com/weg/biblioteca/BibliotecaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/main/java/com/weg/biblioteca/BibliotecaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio-gestao-de-qualidade" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio-gestao-de-qualidade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/MinhaPrimeiraApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/MinhaPrimeiraApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/controller/ContatoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/infra/Conexao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/model/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/repo/ContatoRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/repo/ContatoRepoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/service/ContatoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/weg/minha_primeira_api/MinhaPrimeiraApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/senai/minha_primeira_api/MinhaPrimeiraApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testes/testesCpp" beforeDir="false" afterPath="$PROJECT_DIR$/../testes/testesCpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Guilherme-Doge&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Guilherme-Doge/backend.git&quot;,
+    &quot;accountId&quot;: &quot;811fa96b-79c0-49c6-acf2-6bf5445e64ae&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3DG3vagX3TeGEGOc37nUHYz1AxD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MinhaPrimeiraApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/guilherme_doge1/Desktop/backend/minha-primeira-api&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\guilherme_doge1\Desktop\backend\minha-primeira-api" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff39a3ad-387a-4351-8393-3ada88e2bc66" name="Changes" comment="" />
+      <created>1777894810671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777894810671</updated>
+    </task>
+    <servers />
+  </component>
+</project>
