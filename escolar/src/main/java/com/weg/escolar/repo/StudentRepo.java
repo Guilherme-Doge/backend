@@ -1,5 +1,7 @@
 package com.weg.escolar.repo;
 
+import com.weg.escolar.dto.GradeResponseDto;
+import com.weg.escolar.model.Grade;
 import com.weg.escolar.model.Student;
 
 import java.sql.SQLException;
@@ -16,4 +18,6 @@ public interface StudentRepo {
     Student updateStudent(Student student) throws SQLException;
 
     void deleteStudent(Long id) throws SQLException;
+
+    List<Grade> getStudentGrades(Long id) throws SQLException;
 }

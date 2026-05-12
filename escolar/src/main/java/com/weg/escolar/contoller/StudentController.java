@@ -1,5 +1,6 @@
 package com.weg.escolar.contoller;
 
+import com.weg.escolar.dto.GradeResponseDto;
 import com.weg.escolar.dto.StudentRequestDto;
 import com.weg.escolar.dto.StudentResponseDto;
 import com.weg.escolar.service.StudentService;
@@ -46,7 +47,7 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public StudentResponseDto createStudent(@RequestBody StudentRequestDto studentRequestDto, @PathVariable Long id) {
+    public StudentResponseDto updateStudent(@RequestBody StudentRequestDto studentRequestDto, @PathVariable Long id) {
         try {
             return service.updateStudent(studentRequestDto, id);
         } catch (RuntimeException | SQLException e) {
@@ -55,9 +56,18 @@ public class StudentController {
     }
 
     @DeleteMapping("/{id}")
-    public void createStudent(@PathVariable Long id) {
+    public void deleteStudent(@PathVariable Long id) {
         try {
             service.deleteStudent(id);
+        } catch (RuntimeException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @GetMapping("/{id}/notas")
+    public List<GradeResponseDto> getStudentGrades(@PathVariable Long id) {
+        try {
+            return service.getStudentGrades(id);
         } catch (RuntimeException | SQLException e) {
             throw new RuntimeException(e);
         }

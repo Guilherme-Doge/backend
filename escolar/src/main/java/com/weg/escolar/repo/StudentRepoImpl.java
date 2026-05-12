@@ -1,9 +1,11 @@
 package com.weg.escolar.repo;
 
 import com.weg.escolar.infra.ConnectionFactory;
+import com.weg.escolar.model.Grade;
 import com.weg.escolar.model.Student;
 import org.springframework.stereotype.Repository;
 
+import javax.swing.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -131,5 +133,38 @@ public class StudentRepoImpl implements StudentRepo {
 
             stmt.executeUpdate();
         }
+    }
+
+    @Override
+    public List<Grade> getStudentGrades(Long id) throws SQLException {
+        List<Grade> grades = new ArrayList<>();
+
+        String sql = """
+                SELECT
+                    n.valor AS nota_valor,
+                    n.aula_id,
+                    n.aluno_id,
+                    au.assunto AS aula_assunto,
+                    al.nome AS aluno_nome,
+                    al.id
+                FROM nota AS n
+                INNER JOIN aula AS au ON au.id = n.aula_id
+                INNER JOIN aluno AS al ON al.id = n.aluno_id
+                WHERE n.aluno_id = ?;""";
+
+        try (Connection conn = ConnectionFactory.connect();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setLong(1, id);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                grades.add(new Grade(rs.getString("aluno_nome"),
+                        rs.getString("aula_assunto"),
+                        rs.getDouble("nota_valor")));
+            }
+        }
+        return grades;
     }
 }

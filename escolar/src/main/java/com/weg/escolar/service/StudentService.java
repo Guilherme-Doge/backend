@@ -1,5 +1,6 @@
 package com.weg.escolar.service;
 
+import com.weg.escolar.dto.GradeResponseDto;
 import com.weg.escolar.dto.StudentRequestDto;
 import com.weg.escolar.dto.StudentResponseDto;
 
@@ -16,4 +17,6 @@ public interface StudentService {
     StudentResponseDto updateStudent(StudentRequestDto studentRequestDto, Long id) throws SQLException;
 
     void deleteStudent(Long id) throws SQLException;
+
+    List<GradeResponseDto> getStudentGrades(Long id) throws SQLException;
 }
