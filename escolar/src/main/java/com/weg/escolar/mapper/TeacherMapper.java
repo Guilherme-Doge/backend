@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class TeacherMapper {
     public TeacherResponseDto toResponse(Teacher teacher) {
         return new TeacherResponseDto(
+                teacher.getId(),
                 teacher.getNome(),
                 teacher.getEmail(),
                 teacher.getDisciplina()

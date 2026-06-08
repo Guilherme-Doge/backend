@@ -38,10 +38,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<StudentResponseDto> getAllStudents() throws SQLException {
         return repo.getAllStudents().stream()
-                .map(student -> new StudentResponseDto(student.getNome(),
-                                                            student.getEmail(),
-                                                            student.getMatricula(),
-                                                            student.getDataNascimento()))
+                .map(student -> new StudentResponseDto(student.getDataNascimento()))
                 .toList();
     }
 

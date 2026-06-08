@@ -21,6 +21,11 @@ public class Course {
         this.listaProfessorIds = listaProfessorIds;
     }
 
+    public Course(String nome, String codigo) {
+        this.nome = nome;
+        this.codigo = codigo;
+    }
+
     public Long getId() {
         return id;
     }

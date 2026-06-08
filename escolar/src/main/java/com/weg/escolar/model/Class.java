@@ -8,13 +8,22 @@ public class Class {
     private Long cursoId;
     private Long professorId;
     private List<Long> listaAlunoIds;
+    private List<String> listaAlunoNomes;
 
-    public Class(Long id, String nome, Long cursoId, Long professorId, List<Long> listaAlunoIds) {
+    public Class(Long id, String nome, Long cursoId, Long professorId, List<Long> listaAlunoIds, List<String> listaAlunoNomes) {
         this.id = id;
         this.nome = nome;
         this.cursoId = cursoId;
         this.professorId = professorId;
         this.listaAlunoIds = listaAlunoIds;
+        this.listaAlunoNomes = listaAlunoNomes;
+    }
+
+    public Class(String nome, Long cursoId, Long professorId, List<Long> listaAlunoIds, List<String> listaAlunoNomes) {
+        this.nome = nome;
+        this.cursoId = cursoId;
+        this.professorId = professorId;
+        this.listaAlunoNomes = listaAlunoNomes;
     }
 
     public Class(String nome, Long cursoId, Long professorId, List<Long> listaAlunoIds) {
@@ -62,5 +71,13 @@ public class Class {
 
     public void setListaAlunoIds(List<Long> listaAlunoIds) {
         this.listaAlunoIds = listaAlunoIds;
+    }
+
+    public List<String> getListaAlunoNomes() {
+        return listaAlunoNomes;
+    }
+
+    public void setListaAlunoNomes(List<String> listaAlunoNomes) {
+        this.listaAlunoNomes = listaAlunoNomes;
     }
 }

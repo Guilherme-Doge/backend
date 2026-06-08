@@ -37,7 +37,8 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public List<TeacherResponseDto> getAllTeachers() throws SQLException {
         return repo.getAllTeachers().stream()
-                .map(teacher -> new TeacherResponseDto(teacher.getNome(),
+                .map(teacher -> new TeacherResponseDto(teacher.getId(),
+                        teacher.getNome(),
                         teacher.getEmail(),
                         teacher.getDisciplina()))
                 .toList();
