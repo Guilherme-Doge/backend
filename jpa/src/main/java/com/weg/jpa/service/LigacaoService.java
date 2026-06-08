@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ContaService {
+public class LigacaoService {
     private final ConversaRepository contaRepository;
 
     private final ContaMapper contaMapper;
