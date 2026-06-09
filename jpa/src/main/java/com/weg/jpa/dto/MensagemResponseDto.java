@@ -1,4 +1,15 @@
 package com.weg.jpa.dto;
 
-public record MensagemResponseDto() {
+import com.weg.jpa.model.Conta;
+import com.weg.jpa.model.Conversa;
+
+import java.time.LocalDateTime;
+
+public record MensagemResponseDto(
+        Long id,
+        String texto,
+        LocalDateTime dataEnvio,
+        Conversa conversa,
+        Conta remetente
+) {
 }

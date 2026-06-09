@@ -7,17 +7,20 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ContatoMapper {
-    public Contato toEntity(ContatoRequestDto dto) {
+    public Contato toEntity(ContatoRequestDto contatoRequestDto) {
         return new Contato(
-                dto.nome(),
-                dto.numero());
+                contatoRequestDto.nome(),
+                contatoRequestDto.numero(),
+                contatoRequestDto.conta()
+        );
     }
 
     public ContatoResponseDto toResponse(Contato contato) {
         return new ContatoResponseDto(
                 contato.getId(),
                 contato.getNome(),
-                contato.getNumero()
+                contato.getNumero(),
+                contato.getConta()
         );
     }
 }

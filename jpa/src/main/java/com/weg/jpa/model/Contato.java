@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name="contato")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="contato")
 @Getter
 @Setter
 public class Contato {
@@ -24,9 +24,8 @@ public class Contato {
     @Column(name = "numero", nullable = true)
     private String numero;
 
-    @Column(name = "conta", nullable = false)
     @ManyToOne
-    @JoinColumn(name = "conta_id")
+    @JoinColumn(name = "conta_id", nullable = false)
     private Conta conta;
 
     public Contato(String nome, String numero, Conta conta) {

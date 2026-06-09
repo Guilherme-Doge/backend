@@ -1,4 +1,14 @@
 package com.weg.jpa.dto;
 
-public record LigacaoRequestDto() {
+import com.weg.jpa.model.Conta;
+import com.weg.jpa.model.Contato;
+import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
+
+public record LigacaoRequestDto(
+        LocalDateTime dataHora,
+        Conta conta,
+        Contato contato
+) {
 }

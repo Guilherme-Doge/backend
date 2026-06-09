@@ -1,4 +1,15 @@
 package com.weg.jpa.dto;
 
-public record GrupoRequestDto() {
+import com.weg.jpa.model.Conta;
+import com.weg.jpa.model.Conversa;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public record GrupoRequestDto(
+        String nome,
+        Conversa conversa,
+        List<Conta> membros
+) {
 }

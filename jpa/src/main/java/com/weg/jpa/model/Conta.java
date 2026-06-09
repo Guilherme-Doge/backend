@@ -27,13 +27,24 @@ public class Conta {
     @Column(name="numero", nullable = false)
     private String numero;
 
-    @Column(name = "numeros")
-    @OneToMany(mappedBy = "contato")
+    @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contato> contatos = new ArrayList<>();
 
-    public Conta(String nome, String numero, List<Contato> contatos) {
+    @ManyToMany(mappedBy = "membros")
+    private List<Grupo> grupos = new ArrayList<>();
+
+    @OneToMany(mappedBy = "remetente")
+    private List<Mensagem> mensagensEnviadas = new ArrayList<>();
+
+    @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
+    private List<Ligacao> ligacoes = new ArrayList<>();
+
+    public Conta(String nome, String numero, List<Contato> contatos, List<Grupo> grupos, List<Mensagem> mensagensEnviadas, List<Ligacao> ligacoes) {
         this.nome = nome;
         this.numero = numero;
         this.contatos = contatos;
+        this.grupos = grupos;
+        this.mensagensEnviadas = mensagensEnviadas;
+        this.ligacoes = ligacoes;
     }
 }

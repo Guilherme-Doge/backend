@@ -9,7 +9,10 @@ public class ContaMapper {
         return new Conta(
                 contaRequestDto.nome(),
                 contaRequestDto.numero(),
-                contaRequestDto.contatos()
+                contaRequestDto.contatos(),
+                contaRequestDto.grupos(),
+                contaRequestDto.mensagensEnviadas(),
+                contaRequestDto.ligacoes()
         );
     }
 
@@ -18,7 +21,10 @@ public class ContaMapper {
                 conta.getId(),
                 conta.getNome(),
                 conta.getNumero(),
-                conta.getContatos()
+                conta.getContatos(),
+                conta.getGrupos(),
+                conta.getMensagensEnviadas(),
+                conta.getLigacoes()
         );
     }
 }
