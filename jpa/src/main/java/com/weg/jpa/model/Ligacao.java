@@ -24,11 +24,11 @@ public class Ligacao {
     private LocalDateTime dataHora = LocalDateTime.now();
 
     @ManyToOne
-    @JoinColumn(name = "conta_id", nullable = false)
+    @JoinColumn(name = "conta_id", referencedColumnName = "conta_id", nullable = false)
     private Conta conta;
 
     @ManyToOne
-    @JoinColumn(name = "contato_id", nullable = false)
+    @JoinColumn(name = "contato_id", referencedColumnName = "contato_id", nullable = false)
     private Contato contato;
 
     public Ligacao(LocalDateTime dataHora, Conta conta, Contato contato) {

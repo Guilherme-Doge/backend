@@ -3,10 +3,16 @@ package com.weg.jpa.service;
 import com.weg.jpa.dto.ContaRequestDto;
 import com.weg.jpa.dto.ContaResponseDto;
 import com.weg.jpa.dto.ContatoResponseDto;
+import com.weg.jpa.dto.GrupoResponseDto;
 import com.weg.jpa.mapper.ContaMapper;
 import com.weg.jpa.mapper.ContatoMapper;
+import com.weg.jpa.mapper.GrupoMapper;
+import com.weg.jpa.mapper.LigacaoMapper;
 import com.weg.jpa.model.Conta;
-import com.weg.jpa.repository.ConversaRepository;
+import com.weg.jpa.repository.ContaRepository;
+import com.weg.jpa.repository.ContatoRepository;
+import com.weg.jpa.repository.GrupoRepository;
+import com.weg.jpa.repository.LigacaoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +21,21 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ContaService {
-    private final ConversaRepository contaRepository;
+    private final ContaRepository contaRepository;
+
+    private final ContatoRepository contatoRepository;
+
+    private final GrupoRepository grupoRepository;
+
+    private final LigacaoRepository ligacaoRepository;
 
     private final ContaMapper contaMapper;
 
     private final ContatoMapper contatoMapper;
+
+    private final GrupoMapper grupoMapper;
+
+    private final LigacaoMapper ligacaoMapper;
 
     public ContaResponseDto save(ContaRequestDto contaRequestDto) {
         Conta conta = contaMapper.toEntity(contaRequestDto);
@@ -45,8 +61,14 @@ public class ContaService {
     }
 
     public List<ContatoResponseDto> getContaContatos(Long id) {
-        return contaRepository.findByContaId(id).stream()
+        return contatoRepository.findByConta_Id(id).stream()
                 .map(contatoMapper::toResponse)
+                .toList();
+    }
+
+    public List<GrupoResponseDto> getContaGrupos(Long id) {
+        return grupoRepository.findByMembros_Id(id).stream()
+                .map(grupoMapper::toResponse)
                 .toList();
     }
 

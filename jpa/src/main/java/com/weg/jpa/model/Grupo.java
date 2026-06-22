@@ -31,7 +31,7 @@ public class Grupo {
     @JoinTable(
             name = "grupo_membros",
             joinColumns = @JoinColumn(name = "grupo_id"),
-            inverseJoinColumns = @JoinColumn(name = "conta_id")
+            inverseJoinColumns = @JoinColumn(name = "conta_id", referencedColumnName = "conta_id")
     )
     private List<Conta> membros = new ArrayList<>();
 

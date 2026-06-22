@@ -23,7 +23,7 @@ public class ContatoController {
         }
     }
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     ContatoResponseDto getContato(@PathVariable Long id) {
         try {
             return contatoService.findById(id);
@@ -32,7 +32,7 @@ public class ContatoController {
         }
     }
 
-    @GetMapping
+    @GetMapping()
     List<ContatoResponseDto> getAllContato() {
         try {
             return contatoService.searchAll();
@@ -51,7 +51,7 @@ public class ContatoController {
         }
     }
 
-    @GetMapping("/{id")
+    @DeleteMapping("/{id}")
     void deleteContato(@PathVariable Long id) {
         try {
             contatoService.deleteById(id);

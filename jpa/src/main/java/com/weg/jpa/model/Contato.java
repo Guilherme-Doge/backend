@@ -16,6 +16,7 @@ public class Contato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "contato_id")
     private Long id;
 
     @Column(name = "nome", nullable = true)

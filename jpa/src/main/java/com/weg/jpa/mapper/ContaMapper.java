@@ -3,7 +3,9 @@ package com.weg.jpa.mapper;
 import com.weg.jpa.dto.ContaRequestDto;
 import com.weg.jpa.dto.ContaResponseDto;
 import com.weg.jpa.model.Conta;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ContaMapper {
     public Conta toEntity(ContaRequestDto contaRequestDto) {
         return new Conta(

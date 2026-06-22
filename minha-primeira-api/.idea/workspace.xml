@@ -5,40 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff39a3ad-387a-4351-8393-3ada88e2bc66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/controller/ContatoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/infraecstruture/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/mapper/ContatoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/repository/ContatoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/repository/ContatoRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/service/ContatoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/MinhaPrimeiraApiApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/controller/ContatoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/infraecstruture/ConnectionFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/model/Contato.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/repository/ContatoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/repository/ContatoRepositoryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/senai/minha_primeira_api/service/ContatoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/senai/minha_primeira_api/MinhaPrimeiraApiApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AtividadeRevisao" beforeDir="false" afterPath="$PROJECT_DIR$/../AtividadeRevisao" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exercicio-Java-Com-Testes/exercicio-java-com-testes" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercicio-Java-Com-Testes/exercicio-java-com-testes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SistemaGestaoFornecedoresEquipamentos" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaGestaoFornecedoresEquipamentos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../biblioteca/src/main/java/com/weg/biblioteca/BibliotecaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/src/main/java/com/weg/biblioteca/BibliotecaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercicio-gestao-de-qualidade" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio-gestao-de-qualidade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/MinhaPrimeiraApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/MinhaPrimeiraApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/controller/ContatoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/infra/Conexao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/senai/minha_primeira_api/model/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/repo/ContatoRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/repo/ContatoRepoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/service/ContatoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weg/minha_primeira_api/service/ContatoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/weg/minha_primeira_api/MinhaPrimeiraApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/senai/minha_primeira_api/MinhaPrimeiraApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/controller/ContaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/controller/ContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/controller/ContatoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/ContaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/ContaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/ConversaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/ConversaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/GrupoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/GrupoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/LigacaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/LigacaoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/MensagemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/mapper/MensagemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Grupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Grupo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Ligacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Ligacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Mensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/model/Mensagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ContaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ContaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ContatoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ConversaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/ConversaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/GrupoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/GrupoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/LigacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/LigacaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/MensagemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/repository/MensagemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ContaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ContatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ContatoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ConversaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/ConversaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/GrupoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/GrupoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/LigacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/LigacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/MensagemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/main/java/com/weg/jpa/service/MensagemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../testes/testesCpp" beforeDir="false" afterPath="$PROJECT_DIR$/../testes/testesCpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,12 +61,12 @@
     &quot;assignee&quot;: &quot;Guilherme-Doge&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Guilherme-Doge/backend.git&quot;,
-    &quot;accountId&quot;: &quot;811fa96b-79c0-49c6-acf2-6bf5445e64ae&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Guilherme-Doge/backend.git",
+    "accountId": "fa5560c8-7415-4ded-a971-0a926d499262"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

@@ -3,6 +3,7 @@ package com.weg.jpa.controller;
 import com.weg.jpa.dto.ContaRequestDto;
 import com.weg.jpa.dto.ContaResponseDto;
 import com.weg.jpa.dto.ContatoResponseDto;
+import com.weg.jpa.dto.GrupoResponseDto;
 import com.weg.jpa.service.ContaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +25,7 @@ public class ContaController {
         }
     }
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     ContaResponseDto getConta(@PathVariable Long id) {
         try {
             return contaService.findById(id);
@@ -33,7 +34,7 @@ public class ContaController {
         }
     }
 
-    @GetMapping
+    @GetMapping()
     List<ContaResponseDto> getAllConta() {
         try {
             return contaService.searchAll();
@@ -51,6 +52,24 @@ public class ContaController {
         }
     }
 
+    @GetMapping("/{id}/grupos")
+    List<GrupoResponseDto> getContaGrupos(@PathVariable Long id) {
+        try {
+            return contaService.getContaGrupos(id);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    //@GetMapping("/{id}/ligacoes")
+    //List<ContatoResponseDto> getContaLigacoes(@PathVariable Long id) {
+    //    try {
+    //        return contaService.getContaLigacoes(id);
+    //    } catch (RuntimeException e) {
+    //        throw new RuntimeException(e.getMessage());
+    //    }
+    //}
+
     @PutMapping("/{id}")
     ContaResponseDto updateConta(@PathVariable Long id,
                                      @RequestBody ContaRequestDto contaRequestDto) {
@@ -61,7 +80,7 @@ public class ContaController {
         }
     }
 
-    @GetMapping("/{id")
+    @DeleteMapping("/{id}")
     void deleteConta(@PathVariable Long id) {
         try {
             contaService.deleteById(id);

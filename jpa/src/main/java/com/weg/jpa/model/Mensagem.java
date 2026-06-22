@@ -19,7 +19,7 @@ public class Mensagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "texto", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "texto", nullable = false)
     private String texto;
 
     @Column(name = "data_envio", nullable = false)
@@ -30,7 +30,7 @@ public class Mensagem {
     private Conversa conversa;
 
     @ManyToOne
-    @JoinColumn(name = "remetente_id", nullable = false)
+    @JoinColumn(name = "remetente_id", referencedColumnName = "conta_id", nullable = false)
     private Conta remetente;
 
     public Mensagem(String texto, LocalDateTime dataEnvio, Conversa conversa, Conta remetente) {

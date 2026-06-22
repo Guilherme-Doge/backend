@@ -3,7 +3,9 @@ package com.weg.jpa.mapper;
 import com.weg.jpa.dto.GrupoRequestDto;
 import com.weg.jpa.dto.GrupoResponseDto;
 import com.weg.jpa.model.Grupo;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GrupoMapper {
     public Grupo toEntity(GrupoRequestDto grupoRequestDto) {
         return new Grupo(

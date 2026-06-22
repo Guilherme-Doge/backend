@@ -3,7 +3,9 @@ package com.weg.jpa.mapper;
 import com.weg.jpa.dto.MensagemRequestDto;
 import com.weg.jpa.dto.MensagemResponseDto;
 import com.weg.jpa.model.Mensagem;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MensagemMapper {
     public Mensagem toEntity(MensagemRequestDto mensagemRequestDto) {
         return new Mensagem(
