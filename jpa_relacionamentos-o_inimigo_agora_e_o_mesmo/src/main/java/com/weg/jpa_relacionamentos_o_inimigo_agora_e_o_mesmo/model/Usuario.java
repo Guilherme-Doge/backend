@@ -6,12 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Getter
 @Setter
-public class Pessoa {
+public class Usuario {
 
     @Id
     @Column(nullable = false)
@@ -22,14 +25,18 @@ public class Pessoa {
     private String nome;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Documento documento;
+    private Contato contato;
 
-    public Pessoa(String nome, Documento documento) {
+    @ManyToMany
+    @JoinTable(
+            name = "usuario_livro",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "livro_id")
+    )
+    private List<Livro> livrosEmprestados = new ArrayList<>();
+
+    public Usuario(String nome, Contato contato) {
         this.nome = nome;
-        this.documento = documento;
-    }
-
-    public Pessoa(Long id) {
-        this.id = id;
+        this.contato = contato;
     }
 }

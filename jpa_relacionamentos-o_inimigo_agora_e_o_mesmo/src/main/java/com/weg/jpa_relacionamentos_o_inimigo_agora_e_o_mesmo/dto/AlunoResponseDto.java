@@ -1,8 +1,10 @@
 package com.weg.jpa_relacionamentos_o_inimigo_agora_e_o_mesmo.dto;
 
-public record PessoaResponseDto(
+import java.util.List;
+
+public record AlunoResponseDto(
         Long id,
         String nome,
-        DocumentoResponseDto documento
+        List<CursoResumoDto> cursos
 ) {
 }

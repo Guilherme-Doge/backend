@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Pessoa {
+public class Endereco {
 
     @Id
     @Column(nullable = false)
@@ -19,17 +19,17 @@ public class Pessoa {
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
+    private String rua;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Documento documento;
+    @Column(nullable = false)
+    private String numero;
 
-    public Pessoa(String nome, Documento documento) {
-        this.nome = nome;
-        this.documento = documento;
-    }
+    @OneToOne
+    @JoinColumn(name = "funcionario_id")
+    private Funcionario funcionario;
 
-    public Pessoa(Long id) {
-        this.id = id;
+    public Endereco(String rua, String numero) {
+        this.rua = rua;
+        this.numero = numero;
     }
 }

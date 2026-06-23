@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14aa87f1-3fad-417b-899d-9699cf972081" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/AtividadeRevisao" beforeDir="false" afterPath="$PROJECT_DIR$/AtividadeRevisao" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercicio-Java-Com-Testes/exercicio-java-com-testes" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicio-Java-Com-Testes/exercicio-java-com-testes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaGestaoFornecedoresEquipamentos" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaGestaoFornecedoresEquipamentos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicio-gestao-de-qualidade" beforeDir="false" afterPath="$PROJECT_DIR$/exercicio-gestao-de-qualidade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/DocumentoRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/DocumentoResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/PessoaRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/PessoaRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/PessoaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/dto/PessoaResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/mapper/DocumentoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/mapper/PessoaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/mapper/PessoaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/model/Documento.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/model/Documento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/repo/DocumentoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/repo/DocumentoRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/repo/PessoaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/java/com/weg/jpa_relacionamentos_o_inimigo_agora_e_o_mesmo/repo/PessoaRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa_relacionamentos-o_inimigo_agora_e_o_mesmo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/testesCpp" beforeDir="false" afterPath="$PROJECT_DIR$/testes/testesCpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3FXIobaPZS3g7oS7EWEx0cgnPLU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Users/guilherme_doge1/Desktop/backend"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14aa87f1-3fad-417b-899d-9699cf972081" name="Changes" comment="" />
+      <created>1782215163572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782215163572</updated>
+    </task>
+    <servers />
+  </component>
+</project>

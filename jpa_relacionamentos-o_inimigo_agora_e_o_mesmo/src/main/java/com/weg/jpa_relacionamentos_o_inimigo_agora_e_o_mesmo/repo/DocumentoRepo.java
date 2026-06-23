@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DocumentoRepo extends JpaRepository<Documento, Long> {
+    boolean existsByNumero(Long numero);
+
+    Documento findByPessoaId(Long id);
 }
