@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.util.List;
 
+@Table(name = "pedido")
 @Entity
 @Getter
 @Setter

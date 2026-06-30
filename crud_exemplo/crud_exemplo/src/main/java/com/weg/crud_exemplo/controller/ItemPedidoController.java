@@ -2,8 +2,11 @@ package com.weg.crud_exemplo.controller;
 
 import com.weg.crud_exemplo.dto.ItemPedidoRequestDto;
 import com.weg.crud_exemplo.dto.ItemPedidoResponseDto;
+import com.weg.crud_exemplo.dto.RelatorioSimplesResponseDto;
 import com.weg.crud_exemplo.service.ItemPedidoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,6 +45,15 @@ public class ItemPedidoController {
         }
     }
 
+    @GetMapping("/relatorio")
+    public ResponseEntity<List<RelatorioSimplesResponseDto>> getRelatorioSimples() {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(itemPedidoService.getRelatorioSimples());
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
     @PutMapping("/{id}")
     public ItemPedidoResponseDto put(@RequestBody ItemPedidoRequestDto itemPedidoRequestDto, @PathVariable Long id) {
         try {
@@ -52,11 +64,12 @@ public class ItemPedidoController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
         try {
             itemPedidoService.delete(id);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_MODIFIED).build();
         }
     }
 

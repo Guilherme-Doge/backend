@@ -3,10 +3,12 @@ package com.weg.crud_exemplo.service;
 import com.weg.crud_exemplo.dto.ItemPedidoRequestDto;
 import com.weg.crud_exemplo.dto.ItemPedidoResponseDto;
 import com.weg.crud_exemplo.dto.PedidoResponseDto;
+import com.weg.crud_exemplo.dto.RelatorioSimplesResponseDto;
 import com.weg.crud_exemplo.mapper.ItemPedidoMapper;
 import com.weg.crud_exemplo.mapper.PedidoMapper;
 import com.weg.crud_exemplo.model.ItemPedido;
 import com.weg.crud_exemplo.model.Pedido;
+import com.weg.crud_exemplo.projection.RelatorioSimplesProjection;
 import com.weg.crud_exemplo.repo.ItemPedidoRepo;
 import com.weg.crud_exemplo.repo.PedidoRepo;
 import lombok.RequiredArgsConstructor;
@@ -50,6 +52,12 @@ public class ItemPedidoService {
         List<ItemPedido> itemPedidos = itemPedidoRepo.findAll();
 
         return itemPedidos.stream().map(itemPedidoMapper::toResponse).toList();
+    }
+
+    public List<RelatorioSimplesResponseDto> getRelatorioSimples() throws Exception {
+        List<RelatorioSimplesProjection> projection = itemPedidoRepo.getRelatorioSimples();
+
+        return projection.stream().map(itemPedidoMapper::toRelatorioResponse).toList();
     }
 
     public ItemPedidoResponseDto put(ItemPedidoRequestDto itemPedidoRequestDto, Long id) throws Exception {

@@ -3,8 +3,10 @@ package com.weg.crud_exemplo.mapper;
 import com.weg.crud_exemplo.dto.ItemPedidoRequestDto;
 import com.weg.crud_exemplo.dto.ItemPedidoResponseDto;
 import com.weg.crud_exemplo.dto.PedidoResponseDto;
+import com.weg.crud_exemplo.dto.RelatorioSimplesResponseDto;
 import com.weg.crud_exemplo.model.ItemPedido;
 import com.weg.crud_exemplo.model.Pedido;
+import com.weg.crud_exemplo.projection.RelatorioSimplesProjection;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -20,5 +22,11 @@ public class ItemPedidoMapper {
                                         itemPedido.getNome(),
                                         itemPedido.getPreco(),
                                         itemPedido.getPedido());
+    }
+
+    public RelatorioSimplesResponseDto toRelatorioResponse(RelatorioSimplesProjection projection) {
+        return new RelatorioSimplesResponseDto(projection.getIdPedido(),
+                                                projection.getNome(),
+                                                projection.getPreco());
     }
 }

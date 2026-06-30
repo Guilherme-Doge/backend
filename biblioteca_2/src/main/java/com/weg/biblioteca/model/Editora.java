@@ -1,4 +1,4 @@
-package com.weg.crud_exemplo.model;
+package com.weg.biblioteca.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,29 +6,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "item_pedido")
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
+@Table(name = "editora")
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemPedido {
-
+public class Editora {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
 
-    private Double preco;
+    @OneToMany(mappedBy = "editora")
+    private List<Livro> livros;
 
-    @ManyToOne
-    @JoinColumn(name = "pedido")
-    private Pedido pedido;
-
-    public ItemPedido(String nome, Double preco, Pedido pedido) {
+    public Editora(String nome) {
         this.nome = nome;
-        this.preco = preco;
-        this.pedido = pedido;
     }
 }
