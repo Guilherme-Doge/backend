@@ -4,6 +4,8 @@ import com.weg.biblioteca.dto.*;
 import com.weg.biblioteca.model.Autor;
 import com.weg.biblioteca.model.Editora;
 import com.weg.biblioteca.model.Livro;
+import com.weg.biblioteca.projection.LivroMinimoProjection;
+
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -29,5 +31,9 @@ public class LivroMapper {
                 livro.getCategoria(),
                 editoraResponseDto,
                 autoresResponseDto);
+    }
+
+    public LivroMinimoProjection toLivroMinimo(String titulo, Double preco) {
+        return new LivroMinimoProjection(titulo, preco);
     }
 }

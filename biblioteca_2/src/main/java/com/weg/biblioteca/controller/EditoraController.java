@@ -2,6 +2,7 @@ package com.weg.biblioteca.controller;
 
 import com.weg.biblioteca.dto.EditoraRequestDto;
 import com.weg.biblioteca.dto.EditoraResponseDto;
+import com.weg.biblioteca.projection.EstatisticasEditoraProjection;
 import com.weg.biblioteca.service.EditoraService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,15 @@ public class EditoraController {
     public ResponseEntity<EditoraResponseDto> getById(@PathVariable Long id) {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(editoraService.getById(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
+    @GetMapping("/estatisticas")
+    public ResponseEntity<List<EstatisticasEditoraProjection>> getAllEstatisticas() {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(editoraService.findEstatisticasEditora());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }

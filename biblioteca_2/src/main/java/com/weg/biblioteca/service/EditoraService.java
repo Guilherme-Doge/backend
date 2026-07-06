@@ -4,6 +4,7 @@ import com.weg.biblioteca.dto.EditoraRequestDto;
 import com.weg.biblioteca.dto.EditoraResponseDto;
 import com.weg.biblioteca.mapper.EditoraMapper;
 import com.weg.biblioteca.model.Editora;
+import com.weg.biblioteca.projection.EstatisticasEditoraProjection;
 import com.weg.biblioteca.repo.EditoraRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,12 @@ public class EditoraService {
         List<Editora> editoraes = editoraRepo.findAll();
 
         return editoraes.stream().map(editoraMapper::toResponse).toList();
+    }
+
+    public List<EstatisticasEditoraProjection> findEstatisticasEditora() throws Exception {
+        List<EstatisticasEditoraProjection> editoras = editoraRepo.findAllWithNumberOfBooks();
+
+        return editoras;
     }
 
     public EditoraResponseDto update(EditoraRequestDto editoraRequestDto, Long id) throws Exception {

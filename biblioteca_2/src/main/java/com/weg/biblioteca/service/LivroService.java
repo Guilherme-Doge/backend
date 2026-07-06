@@ -10,6 +10,8 @@ import com.weg.biblioteca.mapper.LivroMapper;
 import com.weg.biblioteca.model.Autor;
 import com.weg.biblioteca.model.Editora;
 import com.weg.biblioteca.model.Livro;
+import com.weg.biblioteca.projection.LivroMinimoProjection;
+import com.weg.biblioteca.projection.LivroSimplesProjection;
 import com.weg.biblioteca.repo.AutorRepo;
 import com.weg.biblioteca.repo.EditoraRepo;
 import com.weg.biblioteca.repo.LivroRepo;
@@ -84,6 +86,37 @@ public class LivroService {
                 .toList();
     }
 
+    public List<LivroResponseDto> findByIsbnNull() {
+        List<Livro> livros = livroRepo.findByIsbnIsNull();
+
+        return livros.stream()
+                .map(livro -> this.mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public List<LivroResponseDto> findByEditoraId(Long id) {
+        List<Livro> livros = livroRepo.findByEditoraIdOrderByTitulo(id);
+
+        return livros.stream()
+                .map(livro -> this.mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public Long countByAutorNacionalidade(String nacionalidade) {
+        return livroRepo.countByAutoresNacionalidade(nacionalidade);
+    }
+
+    public List<String> getLivroTituloByCategoria(String categoria) {
+        return livroRepo.findLivroTituloByCategoria(categoria);
+    }
+
+    public List<LivroResponseDto> findByAutorNome(String nome) {
+        List<Livro> livros = livroRepo.findByAutorNome(nome);
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
 
     public List<LivroResponseDto> getAll() {
         List<Livro> livros = livroRepo.findAll();
@@ -98,6 +131,62 @@ public class LivroService {
                 .orElseThrow(() -> new RuntimeException("Livro não encontrado"));
 
         return mapearParaResponse(livro, livro.getEditora(), livro.getAutores());
+    }
+
+    public List<LivroResponseDto> findAllJoinAutor() {
+        List<Livro> livros = livroRepo.findAllJoinAutor();
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public Double findAveragePrecoByEditora(Long id) {
+        return livroRepo.findAveragePrecoByEditora(id);
+    }
+
+    public List<LivroResponseDto> findLivroPrecoBiggerThanAverage() {
+        List<Livro> livros = livroRepo.findLivroPrecoBiggerThanAverage();
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public List<LivroResponseDto> findLivroWhereDataPublicacaoAfter2023() {
+        List<Livro> livros = livroRepo.findLivroWhereDataPublicacaoAfter2023();
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public List<LivroResponseDto> findLivroByAutorBrasileiro() {
+        List<Livro> livros = livroRepo.findLivroByAutorBrasileiro();
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public List<LivroResponseDto> findLivroByCategoria() {
+        List<Livro> livros = livroRepo.findLivroByAutorBrasileiro();
+
+        return livros.stream()
+                .map(livro -> mapearParaResponse(livro, livro.getEditora(), livro.getAutores()))
+                .toList();
+    }
+
+    public List<LivroMinimoProjection> findAllLivroMinimo() {
+        List<LivroMinimoProjection> livros = livroRepo.findAllMinimo();
+
+        return livros;
+    }
+
+    public List<LivroSimplesProjection> findAllSimples() {
+        List<LivroSimplesProjection> livros = livroRepo.findAllSimples();
+
+        return livros;
     }
 
     public LivroResponseDto update(LivroRequestDto livroRequestDto, Long id) {
